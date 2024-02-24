@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Tabs, TabList, Tab, TabPanels, TabPanel ,  Box, Heading, Text, UnorderedList, ListItem , List  , Flex, VStack, HStack , Image, Spacer, Button } from '@chakra-ui/react';
 import architectural_service from './Images/architectural_service.jpg';
 import '@fortawesome/fontawesome-free/css/all.css';
+import aboutvilla from './Images/about-villa.png';
 
 
 const About = () => {
@@ -11,7 +12,7 @@ const About = () => {
      <Flex
      alignItems="center"
      justifyContent="center"
-     height="100vh"
+     minHeight="100vh"
      flexDirection="column"
    >
      <Heading as="h1" size="xl" mb="8" mt='250px'>
@@ -64,7 +65,7 @@ const About = () => {
      <Box bgColor='whitesmoke'   w='100%' mt='50px'  >
       <HStack spacing={8}>
       <Box boxSize="sm" mt='100px'  ml='200px'  >
-          <Image src={architectural_service} alt="Architecture Service" />
+          <Image src={aboutvilla} alt="Architecture Service" />
      </Box>
         <Box   width='550px'  ml='80px' >
           <Text fontWeight="bold" fontSize="xl">
@@ -152,7 +153,7 @@ const About = () => {
      </Box>
      </Box>
 
-     <Box mt='100px'  mb='100px'    w='700px'  mr='300px'  >  
+     <Box mt='100px'  mb='100px'    w='700px'  mr='300px'    >  
           <Heading  as= 'h1' fontSize = 'x-large'   >Hire Our Trusted Service</Heading>
           <HStack mt='20px' >
                <div style={{ display: 'flex', alignItems: 'center' }}>
