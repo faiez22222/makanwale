@@ -17,6 +17,28 @@ import { FaInstagram, FaFacebook, FaTwitter } from "@fortawesome/fontawesome-fre
 import "@fortawesome/fontawesome-free/css/all.css"; // Import the FontAwesome styles
 import './Card.css'
 import { motion } from 'framer-motion';
+import home_wallpaper from './Images/home-construction-service-lp.png'
+import Construction from "./Construction";
+import costplus from './Images/CostPlus.png'
+import consultation from './Images/consultation.png'
+import designphane from './Images/design-phane.png'
+import construction from './Images/construction.png'
+import movein from './Images/move-in.png'
+import reviewourwork from './Images/review-our-work.png'
+import constructionPlaceTheOrder from './Images/construction-place-the-order.png'
+import adherence from './Images/Adherence.png'
+import nosuncontractor from './Images/No Subcontractors.png'
+import professional from './Images/Professional.png'
+import unique from './Images/Unique.png'
+import quality from './Images/Quality.png'
+import process from './Images/Process.png'
+import competitive from './Images/Competitive.png'
+import hign from './Images/Hign.png'
+import homeconstruction from  './Images/home construction.png'
+import architecture   from  './Images/architecture.png'
+import interiors from  './Images/interiors.png'
+import management from  './Images/management.png'
+import homebanner from './Images/home-banner.png'
 
 const Layout = () => {
     const [showPackageList, setShowPackageList] = useState(false);
@@ -83,21 +105,29 @@ const Layout = () => {
   };
 
   const renderText = () => {
+    const images = [
+      consultation ,
+      reviewourwork,
+      constructionPlaceTheOrder,
+      designphane,
+      construction,
+      movein
+    ];
     switch (activeIndex) {
       case 0:
-        return 'on +91 7802-80-80-80, our Technical expert will get in touch with you and take all your detailed requirements and provide you the estimation for your requiremen';
+        return { text1 : '1. Consultation' , text2 : 'Raise an enquiry or call us on +91 7802-80-80-80, our Technical expert will get in touch with you and take all your detailed requirements and provide you the estimation for your requiremen' ,  image: images[0]};
       case 1:
-        return '2. Review our work Visit our Projects and get to know about our work and quality, come to office, discuss, and close the deal';
+        return { text1 : '2. Review our work' , text2 :  'Review our work Visit our Projects and get to know about our work and quality, come to office, discuss, and close the deal' ,image: images[1] };
       case 2:
-        return ' 3. Place the order Find your good day and sign the transparent construction contract. It helps us to proceed further with Design.  ';
+        return { text1 : '3. Place the order' , text2 : ' Place the order Find your good day and sign the transparent construction contract. It helps us to proceed further with Design.' ,image: images[2] };
       case 3:
-        return ' construction work flow image 4. Design Our experienced Architect will provide you the quality Designs and Architecture as per your requirements and inputs. Discuss and finalize the Design.';
+        return { text1 : '4. Design' , text2 : ' Our experienced Architect will provide you the quality Designs and Architecture as per your requirements and inputs. Discuss and finalize the Design.', image: images[3]  };
       case 4:
-        return 'construction work flow image 5. Execution & Tracking Project execution will be started. Our project management team will be updating you the daily work progress in the form of Photos and Videos.';
+        return { text1 : '5. Execution & Tracking' , text2 : 'construction work flow image 5. Execution & Tracking Project execution will be started. Our project management team will be updating you the daily work progress in the form of Photos and Videos.' ,image: images[4] };
       case 5:
-        return ' 6. Move in We make sure the project completes on time without any hassles. You can Happily move into your Dream Home. ';
+        return { text1 : '6. Move in ' , text2 :  'Move in We make sure the project completes on time without any hassles. You can Happily move into your Dream Home. ' ,image: images[5] };
       default:
-        return '';
+        return {  text1 : " " , text2: '', image: '' };
     }
   };
 
@@ -238,25 +268,37 @@ const Layout = () => {
           {/* ... other cards ... */}
         </Flex>
       </Box>
-
+      <Image
+          boxSize='500px'
+          objectFit='cover'
+          src={homebanner}
+          alt='Dan Abramov'
+          width='100%'
+        />
      
-    <Box  bgColor='white'>
+    <Box  bgColor='white'  >
       <Center>
-      <Text color='black' >Expertise</Text>
+      <Text  fontSize='35px' fontWeight='500'  color='black'  mt='50px' >Our Expertise</Text>
       </Center>
       </Box>
-    <Box bgColor='white' p={8}>
+    <Box bgColor='white' p={8} mt='30px' >
         <Flex justify='space-between' wrap='wrap' rowGap={1}>
         <Box
       className={`card ${isFlipped ? 'flipped' : ''}`}
       onClick={handleCardFlip}
     >
-      <Box className="card-inner">
+      <Box className="card-inner" width='250px'  height='180px' >
         <Box className="card-front">
+        <Image
+          boxSize='100px'
+          objectFit='cover'
+          src={homeconstruction}
+          alt='Dan Abramov'
+        />
           <Text  color='black' fontSize="xl">Home Construction</Text>
           {/* Add your image here */}
         </Box>
-        <Box className="card-back" backgroundColor="orange" p={4} borderRadius="md">
+        <Box className="card-back" backgroundColor="#ff8c00 " p={4} borderRadius="md">
           <Text color='black'>
             Independent House/Villa Constructions with High standards and Quality material
           </Text>
@@ -268,12 +310,18 @@ const Layout = () => {
       className={`card ${isFlipped ? 'flipped' : ''}`}
       onClick={handleCardFlip}
     >
-      <Box className="card-inner">
+      <Box className="card-inner" width='250px'  height='180px'  >
         <Box className="card-front">
+        <Image
+          boxSize='100px'
+          objectFit='cover'
+          src={architecture }
+          alt='Dan Abramov'
+        />
           <Text  color='black' fontSize="xl">Architecural design</Text>
           {/* Add your image here */}
         </Box>
-        <Box className="card-back" backgroundColor="orange" p={4} borderRadius="md">
+        <Box className="card-back" backgroundColor="#ff8c00 " p={4} borderRadius="md">
           <Text color='black' >  
              Best in class Architecture includes Floor plans, 3D Elevations and Structural drawings.
           </Text>
@@ -286,12 +334,18 @@ const Layout = () => {
       className={`card ${isFlipped ? 'flipped' : ''}`}
       onClick={handleCardFlip}
     >
-      <Box className="card-inner">
+      <Box className="card-inner" width='250px'  height='180px'  >
         <Box className="card-front">
+        <Image
+          boxSize='100px'
+          objectFit='cover'
+          src={interiors}
+          alt='Dan Abramov'
+        />
           <Text fontSize="xl" color='black' >interior design</Text>
           {/* Add your image here */}
         </Box>
-        <Box className="card-back" backgroundColor="orange" p={4} borderRadius="md">
+        <Box className="card-back" backgroundColor="#ff8c00 " p={4} borderRadius="md">
           <Text color='black' >
                   Best in class Interior designs and Great Value.
           </Text>
@@ -303,12 +357,18 @@ const Layout = () => {
       className={`card ${isFlipped ? 'flipped' : ''}`}
       onClick={handleCardFlip}
     >
-      <Box className="card-inner">
+      <Box className="card-inner" width='250px'  height='180px'  >
         <Box className="card-front">
-          <Text fontSize="xl" color='black' >Planning MAnagement</Text>
+        <Image
+          boxSize='100px'
+          objectFit='cover'
+          src={management}
+          alt='Dan Abramov'
+        />
+          <Text fontSize="xl" color='black' >Planning Management</Text>
           {/* Add your image here */}
         </Box>
-        <Box className="card-back" backgroundColor="orange" p={4} borderRadius="md">
+        <Box className="card-back" backgroundColor="#ff8c00 " p={4} borderRadius="md">
           <Text color='black' >
           A good construction plan is the basis for developing the budget and the schedule for work.
           </Text>
@@ -318,7 +378,15 @@ const Layout = () => {
         </Flex>
       </Box>
 
-      <Box bgColor= '#ffefea'  h='800px' >
+
+      <Box boxSize='sm'  width='100%'>
+           <Image src={home_wallpaper} alt='Dan Abramov' />
+      </Box>
+      <Construction/> 
+      <Box boxSize='sm'  width='100%'>
+           <Image src={costplus} alt='Dan Abramov' />
+      </Box>
+      <Box bgColor= '#ffefea'  h='1000px' >
    
         <Heading   paddingTop='100px'  ml='650px'  color='black' >How It Works?</Heading>
       <motion.div
@@ -371,21 +439,30 @@ const Layout = () => {
           left: '65%',
           top: '150%',
           transform: 'translate(-50%, -50%)',
-          textAlign: 'center',
+          //textAlign: 'center',
         }}
       >
-        <Card bgColor='white' w='900px' h='100px'  >
-        <Text color='black' >{renderText()}</Text>
+              <Image
+          boxSize='200px'
+          objectFit='cover'
+          src={renderText().image}
+          alt='Dan Abramov'
+          w='100%'
+          height='500px'
+        />
+        <Card bgColor='white' w='900px'  height='150px'  borderRadius='20px'  >
+       <Text fontSize='20px'   ml='20px'  marginTop='25px' color='orange'>{renderText().text1}</Text>
+       <Text   ml='20px' color='black'>{renderText().text2}</Text>
         </Card>
       </motion.div>
     </motion.div>
 
     </Box>
 
-    <Box   bgColor='#f2f2f2'   alignItems="center" justifyContent="center"  >
-        <Heading color='black' >Advantages of Cost-Plus Model</Heading>
-        <Box overflowX='auto'   width='70%' ml='400px' >
-      <Table  size='lg' width='70%' borderWidth="1px" borderColor="gray.300" >
+    <Box   bgColor='#f2f2f2'   alignItems="center" justifyContent="center"    >
+        <Heading color='black'  ml='500px'  paddingTop='70px' >Advantages of Cost-Plus Model</Heading>
+        <Box overflowX='auto'   width='100%' ml='250px' >
+      <Table  size='lg' width='70%' borderWidth="1px" borderColor="gray.300" marginTop='80px'  marginBottom='50px'  >
         <Thead>
           <Tr>
             <Th></Th>
@@ -565,15 +642,14 @@ const Layout = () => {
             </Td>
           </Tr>
         </Tbody>
-        <TableCaption textAlign='center'>Imperial to metric conversion factors</TableCaption>
       </Table>
     </Box>
     </Box>
 
     <Box   bgColor='#ffefea'   alignItems="center" justifyContent="center"  >
-        <Heading color='black' >The Buildhood Advantage</Heading>
-        <Box overflowX='auto'   width='70%' ml='400px' >
-      <Table  size='lg' width='70%' borderWidth="1px" borderColor="gray.300" >
+        <Heading color='black'   ml='550px'  paddingTop='70px' >The Buildhood Advantage</Heading>
+        <Box overflowX='auto'   width='100%' ml='250px' >
+      <Table  size='lg' width='70%' borderWidth="1px" borderColor="gray.300"  marginTop='80px'  marginBottom='50px'  >
         <Thead>
           <Tr>
             <Th></Th>
@@ -807,7 +883,7 @@ const Layout = () => {
             </Td>
           </Tr>
         </Tbody>
-        <TableCaption textAlign='center'>Imperial to metric conversion factors</TableCaption>
+       
       </Table>
     </Box>
     </Box>
@@ -823,36 +899,53 @@ const Layout = () => {
       <Container   w='500px'  marginLeft='300px' marginTop='50px'  >
         <SimpleGrid columns={4} spacingX="250" spacingY="8"    >
           {/* Card 1 */}
-          <Card
-            
-          
-            textAlign="center"
+            <Card
+            display='flex'
+            flexDirection='column' // Stack elements vertically
+            justifyContent='center'
+            alignItems='center'
             boxShadow="lg"
             bg="white"
-            height='200px'
-            w='200px'
-
+            height='170px'
+            w='240px'
           >
-        
             <CardBody>
-              <Text mt="4" fontWeight="600" textTransform="uppercase" color='black' >
+              <Image
+                boxSize='50px'
+                objectFit='cover'
+                src={nosuncontractor}
+                alt='Dan Abramov'
+                ml='50px'
+              />
+              <Text mt="4" fontWeight="600" textTransform="uppercase" color='black'>
                 No subcontractors
               </Text>
             </CardBody>
           </Card>
 
+
           {/* Card 2 */}
           <Card
        
-       textAlign="center"
-       boxShadow="lg"
-       bg="white"
-       height='200px'
-       w='200px'
+       display='flex'
+            flexDirection='column' // Stack elements vertically
+            justifyContent='center'
+            alignItems='center'
+            boxShadow="lg"
+            bg="white"
+            height='170px'
+            w='240px'
           
           >
          
             <CardBody>
+            <Image
+                boxSize='50px'
+                objectFit='cover'
+                src={professional}
+                alt='Dan Abramov'
+                ml='50px'
+              />
               <Text mt="4" fontWeight="600" textTransform="uppercase" color='black'>
                 Professional Project Management
               </Text>
@@ -862,15 +955,25 @@ const Layout = () => {
           {/* Card 3 */}
           <Card
             
-            textAlign="center"
+            display='flex'
+            flexDirection='column' // Stack elements vertically
+            justifyContent='center'
+            alignItems='center'
             boxShadow="lg"
             bg="white"
-            height='200px'
-            w='200px'
+            height='170px'
+            w='240px'
       
           >
           
             <CardBody>
+            <Image
+                boxSize='50px'
+                objectFit='cover'
+                src={unique}
+                alt='Dan Abramov'
+                ml='50px'
+              />
               <Text mt="4" fontWeight="600" textTransform="uppercase" color='black'>
                 Unique and modern designs
               </Text>
@@ -880,15 +983,25 @@ const Layout = () => {
           {/* Card 4 */}
           <Card
               
-              textAlign="center"
+              display='flex'
+              flexDirection='column' // Stack elements vertically
+              justifyContent='center'
+              alignItems='center'
               boxShadow="lg"
               bg="white"
-              height='200px'
-              w='200px'
+              height='170px'
+              w='240px'
           
           >
            
             <CardBody>
+            <Image
+                boxSize='50px'
+                objectFit='cover'
+                src={quality}
+                alt='Dan Abramov'
+                ml='50px'
+              />
               <Text mt="4" fontWeight="600" textTransform="uppercase" color='black'>
                 Quality
               </Text>
@@ -896,14 +1009,24 @@ const Layout = () => {
           </Card>
           <Card
            
-           textAlign="center"
+           display='flex'
+           flexDirection='column' // Stack elements vertically
+           justifyContent='center'
+           alignItems='center'
            boxShadow="lg"
            bg="white"
-           height='200px'
-           w='200px'
+           height='170px'
+           w='240px'
           >
            
             <CardBody>
+            <Image
+                boxSize='50px'
+                objectFit='cover'
+                src={process}
+                alt='Dan Abramov'
+                ml='50px'
+              />
               <Text mt="4" fontWeight="600" textTransform="uppercase" color='black'>
                   Transparency
               </Text>
@@ -911,16 +1034,25 @@ const Layout = () => {
           </Card>
 
           <Card
-           
-           textAlign="center"
+           display='flex'
+           flexDirection='column' // Stack elements vertically
+           justifyContent='center'
+           alignItems='center'
            boxShadow="lg"
            bg="white"
-           height='200px'
-           w='200px'
+           height='170px'
+           w='240px'
           
           >
            
             <CardBody>
+            <Image
+                boxSize='50px'
+                objectFit='cover'
+                src={adherence}
+                alt='Dan Abramov'
+                ml='50px'
+              />
               <Text mt="4" fontWeight="600" textTransform="uppercase" color='black'>
                  Brand/Trustworthy
               </Text>
@@ -928,16 +1060,25 @@ const Layout = () => {
           </Card>
 
           <Card
-          
-          textAlign="center"
-          boxShadow="lg"
-          bg="white"
-          height='200px'
-          w='200px'
+         display='flex'
+         flexDirection='column' // Stack elements vertically
+         justifyContent='center'
+         alignItems='center'
+         boxShadow="lg"
+         bg="white"
+         height='170px'
+         w='240px'
           
           >
            
             <CardBody>
+            <Image
+                boxSize='50px'
+                objectFit='cover'
+                src={competitive}
+                alt='Dan Abramov'
+                ml='50px'
+              />
               <Text mt="4" fontWeight="600" textTransform="uppercase" color='black'>
               Professional Customer Service
               </Text>
@@ -946,21 +1087,34 @@ const Layout = () => {
 
           <Card
            
-           textAlign="center"
+           display='flex'
+            flexDirection='column' // Stack elements vertically
+            justifyContent='center'
+            alignItems='center'
             boxShadow="lg"
             bg="white"
-            height='200px'
-            w='200px'
+            height='170px'
+            w='240px'
           
           >
            
             <CardBody>
+            <Image
+                boxSize='50px'
+                objectFit='cover'
+                src={hign}
+                alt='Dan Abramov'
+                ml='50px'
+              />
               <Text mt="4" fontWeight="600" textTransform="uppercase" color='black'>
                  Hassle-Free Service
               </Text>
             </CardBody>
           </Card>
 
+
+
+       
           {/* Repeat similar structure for other cards */}
         </SimpleGrid>
       </Container>
