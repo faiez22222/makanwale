@@ -1,5 +1,20 @@
 import React, { useState } from 'react';
-import { Tabs, TabList, Tab, TabPanels, TabPanel ,  Box, Heading, Text, UnorderedList, ListItem , List  } from '@chakra-ui/react';
+import { Tabs, TabList, Tab, TabPanels, TabPanel ,  Box, Heading, Text, UnorderedList, ListItem , List  , Image } from '@chakra-ui/react';
+import icon1 from './Images/icon1.png'
+import icon2 from './Images/icon2.png'
+import icon3 from './Images/icon3.png'
+import icon4 from './Images/icon4.png'
+import icon5 from './Images/icon5.png'
+import icon6 from './Images/icon6.png'
+import icon7 from './Images/icon7.png'
+import icon8 from './Images/icon8.png'
+import icon9 from './Images/icon1.png'
+import icon10 from './Images/icon10.png'
+import icon11 from './Images/icon11.png'
+import icon12 from './Images/icon12.png'
+import icon13 from './Images/icon13.png'
+import Tabpanel11 from './Tabpanle11';
+import Tabpanel12 from './Tabpanel12';
 
 const Glow = () => {
   // State to track active tabs
@@ -18,103 +33,131 @@ const Glow = () => {
   ];
 
   return (
-    <Tabs isLazy>
-    <TabList style={{ marginLeft: '50px' }} >
+    <Tabs isLazy   variant='unstyled' >  
+    <TabList style={{ marginLeft: '100px' }} >
       {/* X-axis Tabs */}
-      <Tab>X1</Tab>
-      <Tab>X2</Tab>
-      <Tab>X3</Tab>
+      <Tab   _selected={{ color:'white', backgroundColor : 'orange' }}  bgColor='#DCDCDC'   style={{ width: '200px', height : '50px'    , marginLeft : '5px'   ,  }}  >Silver</Tab>
+      <Tab _selected={{ color: 'white', bgColor : 'orange' }}   bgColor='#DCDCDC'   style={{ width: '200px', height : '50px' ,  marginLeft : '5px'   }} >Gold</Tab>
+      <Tab _selected={{ color: 'white', bgColor : 'orange' }}  bgColor='#DCDCDC'   style={{ width: '200px', height : '50px' ,  marginLeft : '5px'   }} >Diomond</Tab>
+      <Tab _selected={{ color: 'white', bgColor : 'orange' }}  bgColor='#DCDCDC'   style={{ width: '200px', height : '50px'   , marginLeft : '5px'  }} >Platinum</Tab>
     </TabList>
 
     <TabPanels>
       {/* Y-axis Tabs */}
       <TabPanel>
-        <Tabs isLazy orientation="vertical">
+        <Tabs isLazy orientation="vertical" variant='unstyled' >
           <TabList>
-            <Tab>Y1</Tab>
-            <Tab>Y2</Tab>
-            <Tab>Y3</Tab>
+            <Tab _selected={{ color:'white', backgroundColor : 'orange' }}  bgColor='grey'   style={{ width: '70px', height : '50px'     ,  }} >
+            <Image
+              boxSize='25px'
+              objectFit='cover'
+              src= {icon1}
+              alt='Dan Abramov'
+            />
+            </Tab>
+            <Tab _selected={{ color:'white', backgroundColor : 'orange' }}  bgColor='grey'   style={{ width: '70px', height : '50px'     ,  }} >
+            <Image
+              boxSize='25px'
+              objectFit='cover'
+              src= {icon2}
+              alt='Dan Abramov'
+            />
+            </Tab>
+            <Tab _selected={{ color:'white', backgroundColor : 'orange' }}  bgColor='grey'   style={{ width: '70px', height : '50px'     ,  }} >
+            <Image
+              boxSize='25px'
+              objectFit='cover'
+              src= {icon3}
+              alt='Dan Abramov'
+            />
+            </Tab>
+            <Tab _selected={{ color:'white', backgroundColor : 'orange' }}  bgColor='grey'   style={{ width: '70px', height : '50px'     ,  }} >
+            <Image
+              boxSize='25px'
+              objectFit='cover'
+              src= {icon4}
+              alt='Dan Abramov'
+            />
+            </Tab>
+            <Tab _selected={{ color:'white', backgroundColor : 'orange' }}  bgColor='grey'   style={{ width: '70px', height : '50px'     ,  }} >
+            <Image
+              boxSize='25px'
+              objectFit='cover'
+              src= {icon5}
+              alt='Dan Abramov'
+            />
+            </Tab>
+            <Tab _selected={{ color:'white', backgroundColor : 'orange' }}  bgColor='grey'   style={{ width: '70px', height : '50px'     ,  }} >
+            <Image
+              boxSize='25px'
+              objectFit='cover'
+              src= {icon6}
+              alt='Dan Abramov'
+            />
+              </Tab>
+            <Tab _selected={{ color:'white', backgroundColor : 'orange' }}  bgColor='grey'   style={{ width: '70px', height : '50px'     ,  }} >
+            <Image
+              boxSize='25px'
+              objectFit='cover'
+              src= {icon7}
+              alt='Dan Abramov'
+            />
+            </Tab>
+            <Tab _selected={{ color:'white', backgroundColor : 'orange' }}  bgColor='grey'   style={{ width: '70px', height : '50px'     ,  }} >
+            <Image
+              boxSize='25px'
+              objectFit='cover'
+              src= {icon8}
+              alt='Dan Abramov'
+            />
+            </Tab>
+            <Tab _selected={{ color:'white', backgroundColor : 'orange' }}  bgColor='grey'   style={{ width: '70px', height : '50px'     ,  }} >
+            <Image
+              boxSize='25px'
+              objectFit='cover'
+              src= {icon9}
+              alt='Dan Abramov'
+            />
+            </Tab>
+            <Tab _selected={{ color:'white', backgroundColor : 'orange' }}  bgColor='grey'   style={{ width: '70px', height : '50px'     ,  }} >
+            <Image
+              boxSize='25px'
+              objectFit='cover'
+              src= {icon10}
+              alt='Dan Abramov'
+            />
+            </Tab>
+            <Tab _selected={{ color:'white', backgroundColor : 'orange' }}  bgColor='grey'   style={{ width: '70px', height : '50px'     ,  }} >
+            <Image
+              boxSize='25px'
+              objectFit='cover'
+              src= {icon11}
+              alt='Dan Abramov'
+            />
+            </Tab>
+            <Tab _selected={{ color:'white', backgroundColor : 'orange' }}  bgColor='grey'   style={{ width: '70px', height : '50px'     ,  }} >
+            <Image
+              boxSize='25px'
+              objectFit='cover'
+              src= {icon12}
+              alt='Dan Abramov'
+            />
+            </Tab>
+            <Tab _selected={{ color:'white', backgroundColor : 'orange' }}  bgColor='grey'   style={{ width: '70px', height : '50px'     ,  }} ><Image
+              boxSize='25px'
+              objectFit='cover'
+              src= {icon13}
+              alt='Dan Abramov'
+            /></Tab>
           </TabList>
 
           {/* Content in the middle */}
           <TabPanels>
             <TabPanel>
-              <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '800px' , backgroundColor : '#fffafa ' }}>
-              <Box>
-      <Heading as="h4" size="md" color="black">
-        Design & Drawings
-      </Heading>
-      <Box>
-        <Heading as="h5" size="sm" fontWeight="bold" color="black">
-          Package Includes:
-        </Heading>
-        <UnorderedList listStyleType="none" margin={0} marginBottom={4}>
-          <ListItem>
-            <Text>
-              <Text size="md" fontWeight="bold" color="black">
-                2D Floor Plans:
-              </Text>
-              <Text color="black">
-                This floor plan is just for your reference only. Floor plan for each project will be designed as per client's requirements.
-              </Text>
-            </Text>
-          </ListItem>
-          <ListItem>
-            <Text>
-              <Text size="md" fontWeight="bold" color="black">
-                Building Elevation:
-              </Text>
-              <Text color="black">
-                - 2D Preliminary elevation view
-                <br />
-                - 3D Elevation rendered view
-                <br />
-                - 2D elevation working drawings
-              </Text>
-              <Text as="span" color="black">
-                This elevation image is just for your reference only. Elevation for each project will be designed as per client's taste and requirement.
-              </Text>
-            </Text>
-          </ListItem>
-          <ListItem>
-            <Text>
-              <Text size="md" fontWeight="bold" color="black">
-                Structural Drawings:
-              </Text>
-              <Text color="black">
-                - Center line marking drawings
-                <br />
-                - Excavation drawings
-                <br/>
-                - Sump drawings
-                <br/>
-                - Footings and Columns drawings
-                <br/>
-                - Plinth beam drawings
-                <br/>
-                - Roof slab shuttering drawings
-                <br/>
-                - Roof slab reinforcement drawings 
-                <br/>
-                - Roof slab and Beam drawings for each level
-                <br/>
-                - Staircase drawings
-                {/* ... (continue with the rest of the list items) */}
-              </Text>
-            </Text>
-          </ListItem>
-        </UnorderedList>
-      </Box>
-      <Box>
-        {/* Warranty content goes here */}
-      </Box>
-    </Box>
-              </div>
+                  <Tabpanel11/>
             </TabPanel>
             <TabPanel>
-              <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '200px' }}>
-                Content for X1 and Y2
-              </div>
+              <Tabpanel12/>
             </TabPanel>
             <TabPanel>
               <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '200px' }}>
@@ -126,13 +169,45 @@ const Glow = () => {
       </TabPanel>
 
       <TabPanel>
-        {/* Similar structure for X2 */}
-        {/* ... */}
+      <Tabs isLazy orientation="vertical">
+          <TabList>
+            <Tab>Y1</Tab>
+            <Tab>Y2</Tab>
+            <Tab>Y3</Tab>
+          </TabList>
+          <TabPanels>
+               <TabPanel>
+                  content for X2 and Y1
+               </TabPanel>
+               <TabPanel>
+                  content for X2 and Y2
+               </TabPanel>
+               <TabPanel>
+                  content for X2 and Y3
+               </TabPanel>
+          </TabPanels>
+       </Tabs>   
       </TabPanel>
 
       <TabPanel>
-        {/* Similar structure for X3 */}
-        {/* ... */}
+      <Tabs isLazy orientation="vertical">
+          <TabList>
+            <Tab>Y1</Tab>
+            <Tab>Y2</Tab>
+            <Tab>Y3</Tab>
+          </TabList>
+          <TabPanels>
+               <TabPanel>
+                  content for X3 and Y1
+               </TabPanel>
+               <TabPanel>
+                  content for X3 and Y2
+               </TabPanel>
+               <TabPanel>
+                  content for X3 and Y3
+               </TabPanel>
+          </TabPanels>
+       </Tabs>   
       </TabPanel>
     </TabPanels>
   </Tabs>
