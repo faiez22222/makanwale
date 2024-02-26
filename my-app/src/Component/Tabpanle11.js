@@ -43,8 +43,8 @@ const Tabpanel11 = () => {
 
   return (
       
-           <Flex  width='100%'     >
-            <Grid templateColumns='repeat(2, 1fr)' width='59%'    >
+           <Flex  width='100%'       >
+            <Grid templateColumns='repeat(2, 1fr)' width='100%'      >
                 <GridItem   >
                 <Box   >
                      <Text  fontWeight='600' fontSize='20px' >Design & Drawings</Text>

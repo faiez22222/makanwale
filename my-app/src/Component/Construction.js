@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Tabs, TabList, Tab, TabPanels, TabPanel ,  Box, Heading, Text, UnorderedList, ListItem , List  , Flex, Container , SimpleGrid , Image, HStack , VStack ,
+import { Tabs, TabList, Tab, TabPanels, TabPanel ,  Box, Heading, Text , Flex, Container , SimpleGrid , Image, HStack , VStack ,
   Table,
   Thead,
   Tbody,
@@ -9,6 +9,13 @@ import { Tabs, TabList, Tab, TabPanels, TabPanel ,  Box, Heading, Text, Unordere
   Td,
   TableCaption,
   TableContainer,
+  Button,
+  List,
+  ListItem,
+  ListIcon,
+  OrderedList,
+  UnorderedList,
+
 } from '@chakra-ui/react';
 import diamond from './Images/diamond.jpg'
 import gold  from './Images/platinum.jpeg'
@@ -45,8 +52,9 @@ const Construction = () => {
                 <Box  w='270px' >
                 <Image src={silver} alt='Dan Abramov' />
                 </Box>
-                <Box w='270px'  borderWidth='1px' borderColor='f9f9f9'  height='350px' >
-                <Table variant='simple'>
+                <Box w='270px'  borderWidth='1px' borderColor='f9f9f9'  height='350px'  >
+                  <Box height='270px'   >   
+                <Table variant='simple'  >
                       <Thead>
                         <Tr>
                           <Th>
@@ -58,40 +66,46 @@ const Construction = () => {
                       <Tbody>
                         <Tr>
                           <Td>
-                    
+                          <List spacing={3}>
+                            <ListItem>
+                              
                             <i className="fas fa-check" style={{ fontSize: "30", color: 'orange' }}></i>
                            <span style={{ marginLeft: '10px' }}>  Floor plans + Structural</span>
-                            </Td>
-                          
-                        </Tr>
-                        <Tr>
-                          <Td>
+                            </ListItem>
+                            <ListItem>
+                              
                             <i className="fas fa-check" style={{ fontSize: "30", color: 'orange' }}></i>
                            <span style={{ marginLeft: '10px' }}>Standard Elevation</span>
-                            </Td>
-                          
-                        </Tr>
-                        <Tr>
-                          <Td>
-                            
+                            </ListItem>
+                            <ListItem>
+                              
                             <i className="fas fa-check" style={{ fontSize: "30", color: 'orange' }}></i>
-                           <span style={{ marginLeft: '10px' }}>Vitrified Tiles Flooring</span>
-                            </Td>
-                        </Tr>
-                        <Tr>
-                          <Td>
+                           <span style={{ marginLeft: '10px' }}> Vitrified Tiles Flooring</span>
+                            </ListItem>
+                            {/* You can also use custom icons from react-icons */}
+                            <ListItem>
+                              
                             <i className="fas fa-check" style={{ fontSize: "30", color: 'orange' }}></i>
                            <span style={{ marginLeft: '10px' }}>Modern Bathroom and Kitchen</span>
-                            </Td>
-                        </Tr>
-                        <Tr>
-                          <Td>
+                            </ListItem>
+                            <ListItem>
+                              
                             <i className="fas fa-check" style={{ fontSize: "30", color: 'orange' }}></i>
                            <span style={{ marginLeft: '10px' }}>Main door</span>
-                            </Td>
+                              </ListItem>
+                          </List>
+                           
+                          </Td>
+                          
                         </Tr>
                       </Tbody>
                     </Table>
+                    </Box>
+                    <Box    height='75px'  display='flex' 
+                   alignItems='center'
+                   justifyContent='center' >
+                    <Button bgColor='orangered' width='65%'   ><Text>View More</Text></Button>
+                    </Box>
                 </Box>
                 </VStack>    
                 <VStack   spacing={0} >
@@ -105,53 +119,58 @@ const Construction = () => {
                 <Box  w='270px' >
                 <Image src={gold} alt='Dan Abramov' />
                 </Box>
-                <Box w='270px'  borderWidth='1px' borderColor='f9f9f9'  height='350px' >
-                <Table variant='simple'>
+                <Box w='270px'  borderWidth='1px' borderColor='f9f9f9'  height='350px'  >
+                  <Box height='270px'>
+                <Table variant='simple'  >
                       <Thead>
                         <Tr>
                           <Th>
-                          Package Includes
+                              Package Includes
               
                             </Th>
                         </Tr>
                       </Thead>
                       <Tbody>
                         <Tr>
-                          <Td>
-                    
+                          <Td height='40px' >
+                          <List spacing={3}>
+                            <ListItem>
+                              
                             <i className="fas fa-check" style={{ fontSize: "30", color: 'orange' }}></i>
                            <span style={{ marginLeft: '10px' }}>  Floor plans + Structural</span>
-                            </Td>
-                          
-                        </Tr>
-                        <Tr>
-                          <Td>
+                            </ListItem>
+                            <ListItem>
+                              
                             <i className="fas fa-check" style={{ fontSize: "30", color: 'orange' }}></i>
                            <span style={{ marginLeft: '10px' }}>Classic Elevation</span>
-                            </Td>
-                          
-                        </Tr>
-                        <Tr>
-                          <Td>
-                            
+                            </ListItem>
+                            <ListItem>
+                              
                             <i className="fas fa-check" style={{ fontSize: "30", color: 'orange' }}></i>
                            <span style={{ marginLeft: '10px' }}>Premium Vitrified Tiles Flooring</span>
-                            </Td>
-                        </Tr>
-                        <Tr>
-                          <Td>
+                            </ListItem>
+                            {/* You can also use custom icons from react-icons */}
+                            <ListItem>
+                              
                             <i className="fas fa-check" style={{ fontSize: "30", color: 'orange' }}></i>
                            <span style={{ marginLeft: '10px' }}>Modern Bathroom and Kitchen</span>
-                            </Td>
-                        </Tr>
-                        <Tr>
-                          <Td>
+                            </ListItem>
+                            <ListItem>
+                              
                             <i className="fas fa-check" style={{ fontSize: "30", color: 'orange' }}></i>
                            <span style={{ marginLeft: '10px' }}>Teak main door</span>
+                              </ListItem>
+                          </List>
                             </Td>
                         </Tr>
                       </Tbody>
                     </Table>
+                    </Box>
+                    <Box    height='75px'  display='flex' 
+                   alignItems='center'
+                   justifyContent='center' >
+                    <Button bgColor='orangered' width='65%'   ><Text>View More</Text></Button>
+                    </Box>
                 </Box>
                 </VStack>    
                 <VStack   spacing={0} >
@@ -165,7 +184,8 @@ const Construction = () => {
                 <Box  w='270px' >
                 <Image src={diamond} alt='Dan Abramov' />
                 </Box>
-                <Box w='270px'  borderWidth='1px' borderColor='f9f9f9' height='350px' >
+                <Box w='270px'  borderWidth='1px' borderColor='f9f9f9' height='350px'  >
+                  <Box height='270px'>
                 <Table variant='simple'>
                       <Thead>
                         <Tr>
@@ -178,40 +198,45 @@ const Construction = () => {
                       <Tbody>
                         <Tr>
                           <Td>
-                    
+                          <List spacing={3}>
+                            <ListItem>
+                              
                             <i className="fas fa-check" style={{ fontSize: "30", color: 'orange' }}></i>
-                           <span style={{ marginLeft: '10px' }}>  Floor plans + Structural</span>
-                            </Td>
-                          
-                        </Tr>
-                        <Tr>
-                          <Td>
+                           <span style={{ marginLeft: '10px' }}>Floor plans + Structural</span>
+                            </ListItem>
+                            <ListItem>
+                              
                             <i className="fas fa-check" style={{ fontSize: "30", color: 'orange' }}></i>
                            <span style={{ marginLeft: '10px' }}>Elegant elevation</span>
-                            </Td>
-                          
-                        </Tr>
-                        <Tr>
-                          <Td>
-                            
+                            </ListItem>
+                            <ListItem>
+                              
                             <i className="fas fa-check" style={{ fontSize: "30", color: 'orange' }}></i>
-                           <span style={{ marginLeft: '10px' }}>Granite Flooring</span>
-                            </Td>
-                        </Tr>
-                        <Tr>
-                          <Td>
+                           <span style={{ marginLeft: '10px' }}> Granite Flooring</span>
+                            </ListItem>
+                            {/* You can also use custom icons from react-icons */}
+                            <ListItem>
+                              
                             <i className="fas fa-check" style={{ fontSize: "30", color: 'orange' }}></i>
                            <span style={{ marginLeft: '10px' }}> Premium Bathroom and Kitchen</span>
-                            </Td>
-                        </Tr>
-                        <Tr>
-                          <Td>
+                            </ListItem>
+                            <ListItem>
+                              
                             <i className="fas fa-check" style={{ fontSize: "30", color: 'orange' }}></i>
-                           <span style={{ marginLeft: '10px' }}>Premium Teak</span>
+                           <span style={{ marginLeft: '10px' }}> Premium Teak</span>
+                              </ListItem>
+                          </List>
                             </Td>
+                          
                         </Tr>
                       </Tbody>
                     </Table>
+                    </Box>
+                    <Box    height='75px'  display='flex' 
+                   alignItems='center'
+                   justifyContent='center' >
+                    <Button bgColor='orangered' width='65%'   ><Text>View More</Text></Button>
+                    </Box>
                 </Box>
                 </VStack>      
                 <VStack   spacing={0} >
@@ -226,6 +251,7 @@ const Construction = () => {
                 <Image src={platinum} alt='Dan Abramov' />
                 </Box>
                 <Box w='270px'  borderWidth='1px' borderColor='f9f9f9'height='350px'  >
+                  <Box height='270px' >
                 <Table variant='simple'>
                       <Thead>
                         <Tr>
@@ -238,40 +264,45 @@ const Construction = () => {
                       <Tbody>
                         <Tr>
                           <Td>
-                    
+                          <List spacing={3}>
+                            <ListItem>
+                              
                             <i className="fas fa-check" style={{ fontSize: "30", color: 'orange' }}></i>
-                           <span style={{ marginLeft: '10px' }}> Floor plans + Structural, Electrical and Plumbing</span>
-                            </Td>
-                          
-                        </Tr>
-                        <Tr>
-                          <Td>
+                           <span style={{ marginLeft: '10px' }}>  Floor plans + Structural, Electrical and Plumbing</span>
+                            </ListItem>
+                            <ListItem>
+                              
                             <i className="fas fa-check" style={{ fontSize: "30", color: 'orange' }}></i>
-                           <span style={{ marginLeft: '10px' }}> Contemporary Elevation</span>
-                            </Td>
-                          
-                        </Tr>
-                        <Tr>
-                          <Td>
-                            
+                           <span style={{ marginLeft: '10px' }}>Contemporary Elevation</span>
+                            </ListItem>
+                            <ListItem>
+                              
                             <i className="fas fa-check" style={{ fontSize: "30", color: 'orange' }}></i>
-                           <span style={{ marginLeft: '10px' }}>Premium Granite Flooring</span>
-                            </Td>
-                        </Tr>
-                        <Tr>
-                          <Td>
+                           <span style={{ marginLeft: '10px' }}> Premium Granite Flooring</span>
+                            </ListItem>
+                            {/* You can also use custom icons from react-icons */}
+                            <ListItem>
+                              
                             <i className="fas fa-check" style={{ fontSize: "30", color: 'orange' }}></i>
                            <span style={{ marginLeft: '10px' }}>Premium Bathroom and Kitchen</span>
-                            </Td>
-                        </Tr>
-                        <Tr>
-                          <Td>
+                            </ListItem>
+                            <ListItem>
+                              
                             <i className="fas fa-check" style={{ fontSize: "30", color: 'orange' }}></i>
-                           <span style={{ marginLeft: '10px' }}>Burma Teak</span>
+                           <span style={{ marginLeft: '10px' }}> Burma Teak</span>
+                              </ListItem>
+                          </List>
                             </Td>
-                        </Tr>
+                          
+                       </Tr>
                       </Tbody>
                     </Table>
+                    </Box>
+                    <Box    height='75px'  display='flex' 
+                   alignItems='center'
+                   justifyContent='center' >
+                    <Button bgColor='orangered' width='65%'   ><Text>View More</Text></Button>
+                    </Box>
                 </Box>
                 </VStack>    
                

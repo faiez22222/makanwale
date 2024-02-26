@@ -1,5 +1,5 @@
 // src/components/Layout.js
-import React, { useContext, useState, useEffect , useRef } from "react";
+import React, { useContext, useState, useEffect , useRef  } from "react";
 import { Box, Flex, Spacer, Image, Link , Text, Center, Heading , Tab , TabList , Tabs, TabPanels, TabPanel , Menu , MenuButton , MenuList , MenuItem  , Button , MenuItemOption , MenuDivider , useDisclosure, VStack , Card, CardHeader, CardBody, CardFooter ,SimpleGrid  , Tag ,   Table,
   Thead,
   Tbody,
@@ -39,6 +39,7 @@ import architecture   from  './Images/architecture.png'
 import interiors from  './Images/interiors.png'
 import management from  './Images/management.png'
 import homebanner from './Images/home-banner.png'
+import MainLayout from "./MainLayout";
 
 const Layout = () => {
     const [showPackageList, setShowPackageList] = useState(false);
@@ -134,56 +135,10 @@ const Layout = () => {
   return (
     <>
         <Flex bgColor="orange"  w='100%' h='35px' >
-           <Text>Hey</Text>
+           {/* <Text>Hey</Text> */}
        </Flex>
-       <Flex bgColor="white"  w='100%' h='70px' >
-           <Center  ml='200px'  >
-           <Heading  fontSize='4xl'  color="black" >MakanWale</Heading>
-           <Spacer/>
-           <Tabs variant="line"  color='black'  >
-          <TabList>
-            <Tab>Home</Tab>
-            <Tab>
-              <Menu>
-                <MenuButton as={Button} onFocus={() => {}}>
-                  Packages
-                </MenuButton>
-                <MenuList>
-                  <MenuItem>Package 1</MenuItem>
-                  <MenuItem>Package 2</MenuItem>
-                  {/* Add more package options as needed */}
-                </MenuList>
-              </Menu>
-            </Tab>
-            <Tab>Project</Tab>
-            <Tab>More</Tab>
-          </TabList>
-          <TabPanels>
-            <TabPanel>
-                
-            </TabPanel>
-          </TabPanels>
-        </Tabs>
-           </Center>
-           <Menu isOpen={isOpen} onClose={onClose} >
-      <MenuButton
-        as={Button}
-        onMouseEnter={handleMouseEnter}
-        // onFocus={handleFocus}
-        onMouseLeave={handleBlur}
-      >
-       <Text color='black' >Click me</Text> 
-      </MenuButton>
-      <MenuList>
-        <MenuItemOption  onSelect={() => handleOptionSelect('Option 1')}>Option 1</MenuItemOption >
-        <MenuItemOption  onSelect={() => handleOptionSelect('Option 1')}>Option 2</MenuItemOption >
-        <MenuDivider />
-        <MenuItemOption onSelect={() => handleOptionSelect('Option 1')} >More options...</MenuItemOption >
-      </MenuList>
-    </Menu>
-       </Flex>
-
-       <Flex
+       <MainLayout/>
+       {/* <Flex
         justify='center'
         align='center'
         bgColor='white'
@@ -197,15 +152,14 @@ const Layout = () => {
             Calculate the approximate cost of doing up your home with our easy-to-use tool.
           </Text>
         </VStack>
-      </Flex>
+      </Flex> */}
 
            
            
 
 
-      <Box bgColor='white' p={8}>
+      {/* <Box bgColor='white' p={8} >
         <Flex justify='space-between' wrap='wrap' rowGap={8}>
-          {/* Repeat Card component for each card */}
           <Card
         onMouseEnter={() => handleMouseEnterCard(1)}
         onMouseLeave={handleMouseLeaveCard}
@@ -265,11 +219,10 @@ const Layout = () => {
           </Tag>
         </CardFooter>
       </Card>
-          {/* ... other cards ... */}
         </Flex>
-      </Box>
-      <Image
-          boxSize='500px'
+      </Box> */}
+      <Image 
+          boxSize='620px'
           objectFit='cover'
           src={homebanner}
           alt='Dan Abramov'
@@ -379,11 +332,13 @@ const Layout = () => {
       </Box>
 
 
-      <Box boxSize='sm'  width='100%'>
-           <Image src={home_wallpaper} alt='Dan Abramov' />
+      <Box boxSize='sm'  width='100%'   >
+           <Link href="/contact-us" >
+             <Image src={home_wallpaper} alt='Dan Abramov' />
+           </Link>    
       </Box>
       <Construction/> 
-      <Box boxSize='sm'  width='100%'>
+      <Box boxSize='sm'  width='100%' mt='50px'  borderWidth='5px' borderColor='black' >
            <Image src={costplus} alt='Dan Abramov' />
       </Box>
       <Box bgColor= '#ffefea'  h='1000px' >
